@@ -1,0 +1,52 @@
+<html>
+    <HEAD>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <style>
+            .navbar { background-color: darkseagreen;}
+            .jumbotron {background-color: seagreen;}
+            .btn-primary {background-color: green;}
+        </style>    
+    </HEAD>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">Amazon Classifier</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/amazonclassifier/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/amazonclassifier/instructions">Instructions</a>
+                <a class="nav-item nav-link" href="https://www.paypal.com/donate/?business=AJBFT6W9KD28S&no_recurring=1&item_name=This+is+to+help+support+running+the+Amazon+Classifier&currency_code=USD">Tip!!!</a>
+              </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <h2>Instructions</h2>
+            <p>
+                This tool utilizes the Amazon purchase reports found at <a href="https://www.amazon.com/b2b/reports">https://www.amazon.com/b2b/reports</a>
+            </p>
+            <p>
+                You will need to create two reports for whatever time period you would like to categorize.
+            </p>
+            <p> Create an "Items" report, and a "Orders and shipments" report and save them after they generate as csv files.</p>
+            <p> You will also want to create a csv file with categories. To get a sample one click <a href="/amazonclassifier/static/samplecategories.csv">Here</a>. Please edit this with your appropriate categories</p>
+            <p> Once you have all three csv files (items, orders, categories) upload them with the appropriate buttons.</p>
+            <p> You can then categorize them appropriately. The fields will do full text search of the categories</p>
+            <p> When finished categorizing, click the bottom button and it will show a report that you can use to help reconcile with your bank</p>
+            <p>
+                Yellow indicates an item that is NOT part of a combined order but had a discount of some sort applied
+                </p>
+                <p>
+                Blue indicates an item that is part of a split transaction, note if the order had a discount applied, the amounts will not add correctly
+                </p>
+        </div>
+        <hr>
+        <footer>
+            Copyright 2022, MKIgnite
+        </footer>
+    </body>
+</html>
